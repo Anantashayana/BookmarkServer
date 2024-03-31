@@ -9,6 +9,10 @@ const app = express();
 app.use(express.json());
 app.use(cors()); // Add this line to enable CORS
 
+app.get('/', (req, res) => {
+  res.send('Hello World')
+})
+
 // Routes
 app.use('/api/data', dataRouter);
 app.use('/api/login',loginRouter);
